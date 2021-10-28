@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Get filters for category -->
+    <route url="/V1/cat-filters/:categoryId" method="GET">
+        <service class="Mohdibra\Filters\Api\FiltersInterface" method="getFilters"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
